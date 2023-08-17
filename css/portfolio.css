@@ -1,0 +1,63 @@
+/* mediaqueries */
+.heroimage {
+  width: 100%;
+  height: 66vh;
+  background-position: top center;
+  background-size: cover;
+}
+
+h3 {
+  margin-bottom: 2rem;
+}
+
+.portfolio_container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio_container {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.detailbox {
+  background-color: #474448;
+  color: #F5E3E0;
+  padding: 14px;
+}
+.detailbox .client, .detailbox .date_together, .detailbox .req_skills, .detailbox .website, .detailbox .status {
+  margin-bottom: 14px;
+}
+.detailbox .req_skills span {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.detailbox .req_skills span.req_devop {
+  background-color: #F5E3E0;
+  color: #36393B;
+  padding: 4px 7px;
+}
+.detailbox .req_skills span.req_webdev {
+  background-color: #c6f140;
+  color: #36393B;
+  padding: 4px 7px;
+}
+.detailbox .req_skills span.req_webdesign {
+  background-color: #FF5449;
+  color: #F5E3E0;
+  padding: 4px 7px;
+}
+.detailbox .status .status_live {
+  display: inline-block;
+  background-color: #c6f140;
+  color: #36393B;
+  padding: 4px 7px;
+}
+.detailbox .website a {
+  color: #c6f140;
+}
+
+/*# sourceMappingURL=portfolio.css.map */

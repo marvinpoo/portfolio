@@ -1,0 +1,41 @@
+server {
+	server_name berolinica.de;
+	root /var/www/portfolio;
+	index index.html;
+
+	error_log /root/logs/berolinica-error.log;
+
+	# Prevent access to hidden files
+	location ~* /\.(?!well-known\/) {
+		deny all;
+	}
+
+	# Prevent access to certain file extensions
+	location ~\.(ini|log|conf)$ {
+		deny all;
+	}
+
+    location / {
+          try_files $uri $uri/ =404;
+     }
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/berolinica.de/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/berolinica.de/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}server {
+    if ($host = berolinica.de) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    listen [::80];
+	server_name berolinica.de;
+    return 404; # managed by Certbot
+
+
+}
