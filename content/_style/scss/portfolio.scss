@@ -1,0 +1,70 @@
+@import 'viewports';
+@import 'colors';
+
+.heroimage {
+    width: 100%;
+    height: 66vh;
+    background-position: top center;
+    background-size: cover;
+}
+
+h3 {
+    margin-bottom: 2rem;
+}
+
+.portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    @include size(md) {
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+.detailbox {
+    background-color: $black_alt;
+    color: $rose;
+    padding: 14px;
+
+    .client, .date_together, .req_skills, .website, .status {
+        margin-bottom: 14px;
+    }
+    .req_skills {
+        span { 
+            display: inline-block;
+            margin-bottom: 5px;
+
+            &.req_devop {
+                background-color: $rose;
+                color: $black;
+                padding: 4px 7px;
+            }
+            &.req_webdev {
+                background-color: $green;
+                color: $black;
+                padding: 4px 7px;
+            }
+            &.req_webdesign {
+                background-color: $red;
+                color: $rose;
+                padding: 4px 7px;
+            }
+        }
+    }
+    .status {
+        .status_live {
+            display: inline-block; 
+            background-color: $green;
+            color: $black;
+            padding: 4px 7px;
+        }
+    }
+    .website {
+        a {
+            color: $green;
+        }
+    }
+}

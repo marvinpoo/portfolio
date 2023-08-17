@@ -1,0 +1,22 @@
+{
+  "name": "pf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "npx sass content/_style/scss:public/css --watch",
+    "sv": "npx @11ty/eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.63.3"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "eleventy-plugin-i18n": "^0.1.3"
+  }
+}

@@ -1,0 +1,96 @@
+---
+title: "Portfolio"
+layout: "base.njk"
+---
+
+<section id="welcome">
+<h2>Willkommen</h2>
+<p class="intro col__two font__big">Hallo. Wie es aussieht, habe ich euch den Link zu meinem <span class="highlight">Portfolio</span> zukommen lassen. Wenn Ihr das hier ließt, habt Ihr wohl Interesse an meinen Arbeiten. Im folgenden Abschnitt habe ich meine <span class="highlight">Fähigkeiten</span> zusammengefasst und anschließend eine <span class="highlight">Auswahl</span> an Projekten für euch aufbereitet.<br> Gerne freue ich mich über eure <span class="highlight">Rückmeldung</span>, aber auch auf Feedback und konstruktive Kritik zu meinen bisherigen Projekten. Wenn ich euch überzeugen konnte, meldet euch gerne bei mir und lasst uns in Zukunft <span class="highlight">zusammen</span> an unseren gemeinsamen Aufgaben wachsen.</p>
+</section>
+
+<section id="skills">
+<h2>Fähigkeiten</h2>
+
+<div class="charts col__three">
+    <div class="chart1"><canvas id="projektmanagement"></canvas></div>
+    <div class="chart1"><canvas id="webdesign"></canvas></div>
+    <div class="chart1"><canvas id="webentwicklung"></canvas></div>
+</div>
+<script type="module" src="/src/charts/de_webdesign.js"></script>
+<script type="module" src="/src/charts/de_webentwicklung.js"></script>
+<script type="module" src="/src/charts/de_devops.js"></script>
+</section>
+
+<section id="projects">
+<h2>Portfolio</h2>
+
+<div class="grid__cards">
+
+    <a href="/{{ 'menu.langroot' | i18n }}/projekte/fluter/" class="card">
+        <div class="card__img"><img src="/src/img/portfolio/fluter/title_fluter.jpg" /></div>
+        <div class="card__details">
+            <div class="card__details__info">
+                <h2>Fluter</h2>
+                <span class=card__details__info__description>Webdesign.<span>
+            </div>
+            <div class="card__details__info__btn"><img src="/src/img/chev.svg"></div>
+        </div>
+    </a>
+
+    <a href="/{{ 'menu.langroot' | i18n }}/projekte/mpw/" class="card">
+        <div class="card__img"><img src="/src/img/portfolio/mpw/title_mpw.jpg" /></div>
+        <div class="card__details">
+            <div class="card__details__info">
+                <h2>MPW Immobilien</h2>
+                <span class=card__details__info__description>Corporate Design.<span>
+            </div>
+            <div class="card__details__info__btn"><img src="/src/img/chev.svg"></div>
+        </div>
+    </a>
+
+    <a href="/{{ 'menu.langroot' | i18n }}/projekte/mpw1hv/" class="card">
+        <div class="card__img"><img src="/src/img/portfolio/mpw1hv/title_mpw1hv.jpg" /></div>
+        <div class="card__details">
+            <div class="card__details__info">
+                <h2>MPW1 Hausverwaltung</h2>
+                <span class=card__details__info__description>Webdesign & Frontend-Entwicklung.<span>
+            </div>
+            <div class="card__details__info__btn"><img src="/src/img/chev.svg"></div>
+        </div>
+    </a>
+
+    <a href="/{{ 'menu.langroot' | i18n }}/projekte/feuchteklinik/" class="card">
+        <div class="card__img"><img src="/src/img/portfolio/feuchte/title_feuchte.jpg" /></div>
+        <div class="card__details">
+            <div class="card__details__info">
+                <h2>Die Feuchteklinik</h2>
+                <span class=card__details__info__description>Projektmanagement, Konzept & Webdesign.<span>
+            </div>
+            <div class="card__details__info__btn"><img src="/src/img/chev.svg"></div>
+        </div>
+    </a>
+
+    <a href="/{{ 'menu.langroot' | i18n }}/projekte/veaxo/" class="card">
+        <div class="card__img"><img src="/src/img/portfolio/veaxo/title_veaxo.jpg" /></div>
+        <div class="card__details">
+            <div class="card__details__info">
+                <h2>Veaxo Gruppe</h2>
+                <span class=card__details__info__description>Konzept, Design & Webentwicklung.<span>
+            </div>
+            <div class="card__details__info__btn"><img src="/src/img/chev.svg"></div>
+        </div>
+    </a>
+
+    <a href="/{{ 'menu.langroot' | i18n }}/projekte/maulbaer/" class="card">
+        <div class="card__img"><img src="/src/img/portfolio/maulbaer/title_maulbaer.jpg" /></div>
+        <div class="card__details">
+            <div class="card__details__info">
+                <h2>Maulbeerblatt</h2>
+                <span class=card__details__info__description>Redesigns. Betreuung. Content. Web & Print.<span>
+            </div>
+            <div class="card__details__info__btn"><img src="/src/img/chev.svg"></div>
+        </div>
+    </a>
+
+</div>
+</section>

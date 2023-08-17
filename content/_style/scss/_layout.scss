@@ -1,0 +1,18 @@
+.col__two {
+    column-count: 1;
+    column-gap: 30px;
+    @include size(md) {
+        column-count: 2;
+    }
+}
+.col__three {
+    column-count: 1;
+    column-gap: 30px;
+    @include size(md) {
+        column-count: 3;
+    }
+}
+
+section {
+    margin-bottom: 6rem;
+}

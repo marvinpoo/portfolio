@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ dir }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio"/>
+  <title>Marvin Borisch - Portfolio: {{ title }}</title>
+  <link rel="stylesheet" href="/css/master.css">
+  <link rel="stylesheet" href="/css/portfolio.css">
+  <meta name="author" content="Marvin Borisch">
+  <meta name="publisher" content="Marvin Borisch">
+  <meta name="publisher" content="coppnic">
+  <meta name="publisher" content="@coppnic">
+  <meta name="copyright" content="Marvin Borisch">
+  <meta name="description" content="Portfolio">
+  <meta http-equiv="content-language" content="{{ 'menu.langroot' | i18n }}">
+  <meta name="robots" content="index, follow">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+  <meta name="DC.Title" content="Marvin Borisch">
+  <meta name="DC.Creator" content="Marvin Borisch">
+  <meta name="DC.Subject" content="technology">
+  <meta name="DC.Subject" content="webdevelopment">
+  <meta name="DC.Subject" content="webdesign">
+  <meta name="DC.Subject" content="accessibility">
+  <meta name="DC.Subject" content="sustainability">
+  <meta name="DC.Subject" content="privacy">
+  <meta name="DC.Description" content="Portfolio">
+  <meta name="DC.Publisher" content="Marvin Borisch">
+  <meta name="DC.Publisher" content="Coppnic">
+  <meta name="DC.Publisher" content="@coppnic">
+  <meta name="DC.Contributor" content="Marvin Borisch">
+  <meta name="DC.Type" content="text">
+  <meta name="DC.Language" content="en">
+  <meta name="DC.Language" content="en-EN">
+  <meta name="DC.Language" content="en-US">
+  <meta name="DC.Rights" content="Copyright">
+
+  <meta property="og:title" content="Marvin Borisch">
+  <meta property="og:site_name" content="Marvin Borisch">
+  <meta property="og:url" content="https://portfolio.coppnic.cc/">
+  <meta property="og:description" content="< the personal Zen Garden of a 24/7 busy brain >">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://portfolio.coppnic.cc/src/meta/main.jpg">
+  <meta property="og:image:alt" content="Portfolio">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@coppnic" />
+  <meta name="twitter:creator" content="@coppnic" />
+  <meta name="twitter:url" content="https://portfolio.coppnic.cc/" />
+  <meta name="twitter:title" content="Marvin Borisch" />
+  <meta name="twitter:description" content="Portfolio" />
+  <meta name="twitter:image" content="https://portfolio.coppnic.cc/src/meta/main.jpg"" />
+</head>
+<body>
+  <div class="content">
+    <header class="header container">
+    <h1 class="header__title">
+      <a href="/{{ 'menu.langroot' | i18n }}/">Marvin Borisch</a><br>
+      <span class="subline marker-highlight">Portfolio</span>
+    </h1>
+    <div class="heroimage" style="background-image:url('{{ heroimg }}');">
+    </div>
+	</header>
+    <main class="main container">
+      <h2>{{ title }}</h2>
+      <div class="portfolio_container">
+        <section class="project_desc">
+          <h3>Beschreibung</h3>
+          <p class="font__big">{{ content | safe }}</p>
+        </section>
+
+        <section class="detailbox">
+          <h3>Details</h3>
+          <p class="client">
+            <b>Client:</b><br>
+            {% for item in detail_client %}
+                        <span>{{item}}</span>
+            {% endfor %}
+          </p>
+
+          <div class="date_together">
+            <p>
+              <b>Projektzeitraum:</b><br>
+              <span>{{ together }}</span>
+            </p>
+          </div>
+        
+          <div class="req_skills">
+            <p>
+              <b>Skills:</b><br>
+              {% for item in detail_req_devop %}
+                        <span class="req_devop">{{item}}</span>
+              {% endfor %}
+              {% for item in detail_req_webdesign %}
+                        <span class="req_webdesign">{{item}}</span>
+              {% endfor %}
+              {% for item in detail_req_webdev %}
+                        <span class="req_webdev">{{item}}</span>
+              {% endfor %}
+            <p>
+          </div>
+
+          <div class="website">
+            <p>
+              <b>Link:</b><br>
+              <a target="_blank" href="{{ ext_link }}">{{ ext_clean }}</a>
+            </p>
+          </div>
+
+          <div class="status">
+            <p>
+              <b>Projektstatus:</b><br>
+              <span class="{{ status_class }}">{{ status }}</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="contact">
+      <h2>Überzeugt?</h2>
+      <p class="font__big">Konnte ich euch mit meinen <span class="highlight">Arbeitsproben</span> überzeugen? Dann freue ich mich darauf von euch zu hören! Antwortet einfach auf meine Bewerbungs E-Mail oder kontaktiert mich über Linkedin. Ich freue mich auf eine <span class="highlight">gemeinsame Zukunft</span> mit Euch.</p>
+      <a target="_blank" class="btn" href="https://www.linkedin.com/in/marvinborisch/">auf Linkedin kontaktieren</a>
+    </div>
+  	<p>Alle Inhalte sind Urheberrechtlich geschützt. &copy; Marvin Borisch 2023</p>
+    <a target="_blank" href="https://coppnic.cc/legal/imprint/">Impressum</a>
+  </footer>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+  <defs>
+    <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+    </filter>
+  </defs>
+</svg>
+</body>
+</html>
