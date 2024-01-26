@@ -161,6 +161,7 @@ b {
 
 ul, li {
   list-style: circle;
+  list-style-position: inside;
 }
 
 .col__two {
