@@ -159,6 +159,10 @@ b {
   font-weight: 700;
 }
 
+ul, li {
+  list-style: circle;
+}
+
 .col__two {
   column-count: 1;
   column-gap: 30px;
