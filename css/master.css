@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -159,9 +160,17 @@ b {
   font-weight: 700;
 }
 
-ul, li {
-  list-style: circle;
-  list-style-position: inside;
+ul li {
+  list-style: none;
+  position: relative;
+  padding: 3px 0 2px 25px;
+}
+
+ul li::before {
+  content: "»";
+  position: absolute;
+  top: 6px;
+  left: 0;
 }
 
 .col__two {
